@@ -14,6 +14,9 @@ const yargs = require('yargs')
     .alias('d', 'domain')
     .describe('d', 'Domain to Accept Emails for')
     .default('d', 'seasoned.pizza')
+    .alias('p', 'httpd-port')
+    .describe('p', 'what port to listen to for HTTPD')
+    .default('p', 80)
     .help('help')
     .parse();
 
@@ -22,7 +25,8 @@ const config ={
     redis: {
         hostname: yargs.h,
         database: yargs.r
-    }
+    },
+    httpd:{ port: yargs.p }
 };
 
 log.info(`Starting Mail Drop for ${config['domain']}`,{configuration: config});
