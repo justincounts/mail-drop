@@ -1,0 +1,24 @@
+{
+  "name": "mail",
+  "version": "1.0.0",
+  "description": "Mail Drop for seasoned.pizza",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js| bunyan",
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "bunyan": "^1.8.12",
+    "compression": "^1.7.2",
+    "express": "^4.16.3",
+    "mailparser": "^2.2.3",
+    "moment": "^2.22.1",
+    "redis": "^2.8.0",
+    "smtp-server": "^3.4.2",
+    "uuid": "^3.2.1",
+    "yargs": "^11.0.0"
+  }
+}
